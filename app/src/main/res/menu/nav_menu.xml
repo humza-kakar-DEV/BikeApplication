@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_drawer_contributors"
+        android:icon="@drawable/contributors_icon_32"
+        android:title="Contributors" />
+
+    <item
+        android:id="@+id/nav_drawer_rate_us"
+        android:icon="@drawable/rate_us_icon_32"
+        android:title="Rate Us" />
+
+    <item
+        android:id="@+id/nav_drawer_theme"
+        android:icon="@drawable/theme_icon_32"
+        android:title="Theme" />
+
+    <item
+        android:id="@+id/nav_drawer_share"
+        android:icon="@drawable/share_icon_32"
+        android:title="Share" />
+
+    <item
+        android:id="@+id/nav_drawer_about"
+        android:icon="@drawable/about_us_icon_32"
+        android:title="About Us" />
+
+    <item
+        android:id="@+id/nav_drawer_privacy_policy"
+        android:icon="@drawable/privacy_policy_2_32"
+        android:title="Privacy Policy" />
+
+    <item
+        android:id="@+id/nav_drawer_logout"
+        android:icon="@drawable/logout_icon_32"
+        android:title="Logout" />
+
+    <item
+        android:id="@+id/nav_drawer_exit"
+        android:icon="@drawable/logout_icon_2_32"
+        android:title="Exit" />
+
+    <!--    <group android:id="@+id/bottom_menu">-->
+    <!--    </group>-->
+
+</menu>

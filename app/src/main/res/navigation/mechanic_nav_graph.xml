@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mechanic_nav_graph"
+    app:startDestination="@id/mechanicHome">
+
+    <fragment
+        android:id="@+id/createProduct"
+        android:name="com.example.smartbikefyp.fragment.mechanic.CreateProduct"
+        android:label="Create Product"
+        tools:layout="@layout/fragment_create_product">
+        <action
+            android:id="@+id/action_createProduct_to_mechanicHome"
+            app:destination="@id/mechanicHome"
+            app:enterAnim="@anim/custom_slide_in_left"
+            app:exitAnim="@anim/custom_slide_out_right"
+            app:popEnterAnim="@anim/custom_slide_in_left"
+            app:popExitAnim="@anim/custom_slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mechanicHome"
+        android:name="com.example.smartbikefyp.fragment.mechanic.MechanicHome"
+        android:label="Home"
+        tools:layout="@layout/fragment_mechanic_home">
+        <action
+            android:id="@+id/action_mechanicHome_to_createProduct"
+            app:destination="@id/createProduct"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"
+            app:popEnterAnim="@anim/custom_slide_in_left"
+            app:popExitAnim="@anim/custom_slide_out_right" />
+        <action
+            android:id="@+id/action_mechanicHome_to_createService"
+            app:destination="@id/createService"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"
+            app:popEnterAnim="@anim/custom_slide_in_left"
+            app:popExitAnim="@anim/custom_slide_out_right" />
+        <action
+            android:id="@+id/action_mechanicHome_to_mapFragment"
+            app:destination="@id/mapFragment"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"
+            app:popEnterAnim="@anim/custom_slide_in_left"
+            app:popExitAnim="@anim/custom_slide_out_right" />
+        <action
+            android:id="@+id/action_mechanicHome_to_chatBot"
+            app:destination="@id/chatBot"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"
+            app:popEnterAnim="@anim/custom_slide_in_left"
+            app:popExitAnim="@anim/custom_slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mechanicOrderHistory"
+        android:name="com.example.smartbikefyp.fragment.mechanic.MechanicOrderHistory"
+        android:label="History"
+        tools:layout="@layout/fragment_mechanic_order_history" />
+
+    <fragment
+        android:id="@+id/mechanicProfile"
+        android:name="com.example.smartbikefyp.fragment.mechanic.MechanicProfile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_mechanic_profile" />
+    <fragment
+        android:id="@+id/createService"
+        android:name="com.example.smartbikefyp.fragment.mechanic.CreateService"
+        android:label="Create Service"
+        tools:layout="@layout/fragment_create_service">
+        <action
+            android:id="@+id/action_createService_to_mechanicHome"
+            app:destination="@id/mechanicHome"
+            app:enterAnim="@anim/custom_slide_in_left"
+            app:exitAnim="@anim/custom_slide_out_right"
+            app:popEnterAnim="@anim/custom_slide_in_left"
+            app:popExitAnim="@anim/custom_slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.smartbikefyp.fragment.global.MapFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_map">
+        <action
+            android:id="@+id/action_mapFragment_to_mechanicHome"
+            app:destination="@id/mechanicHome"
+            app:enterAnim="@anim/custom_slide_in_left"
+            app:exitAnim="@anim/custom_slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatBot"
+        android:name="com.example.smartbikefyp.fragment.global.ChatBot"
+        android:label="Chat Bot"
+        tools:layout="@layout/fragment_chat_bot">
+        <action
+            android:id="@+id/action_chatBot_to_mechanicHome"
+            app:destination="@id/mechanicHome" />
+    </fragment>
+
+</navigation>

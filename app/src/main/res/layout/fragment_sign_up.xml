@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.authentication.SignUp">
+
+    <ImageView
+        android:id="@+id/cloudIconImageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloud_image_128"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageView
+        android:id="@+id/cloudIconImageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloud_image_128"
+        app:layout_constraintBottom_toBottomOf="@id/guideline16"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/gifIconImageView"
+        android:layout_width="@dimen/_165sdp"
+        android:layout_height="@dimen/_165sdp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/bike_animation" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_100sdp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline15"
+        app:layout_constraintStart_toStartOf="@id/guideline14"
+        app:layout_constraintTop_toTopOf="@id/guideline16">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/signUpEditImageContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="58dp">
+
+                <ImageView
+                    android:id="@+id/editPlaceHolderImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/camera_icon_48"
+                    app:layout_constraintBottom_toBottomOf="@+id/profileImageView"
+                    app:layout_constraintEnd_toEndOf="@+id/profileImageView"
+                    app:layout_constraintStart_toStartOf="@+id/profileImageView"
+                    app:layout_constraintTop_toTopOf="@+id/profileImageView" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/edit_image_set_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:round="@dimen/_100sdp"/>
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/createProductEditImageButton"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/create_product_edit_button_bg"
+                    android:padding="@dimen/_5sdp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pen_icon_32"
+                    app:layout_constraintBottom_toBottomOf="@+id/profileImageView"
+                    app:layout_constraintEnd_toEndOf="@+id/profileImageView"
+                    app:layout_constraintStart_toEndOf="@+id/profileImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/profileImageView"
+                    app:round="@dimen/_10sdp" />
+
+                <ImageView
+                    android:id="@+id/itemDivider1"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:src="@drawable/curve_yellow_fill_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Create account"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userNameTextInput"
+                style="@style/Custom.Outline.TextInput.Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="name"
+                app:startIconDrawable="@drawable/name_icon_2_32"
+                app:startIconTint="@color/black"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneNumberTextInput"
+                style="@style/Custom.Outline.TextInput.Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="phone"
+                app:startIconDrawable="@drawable/phone_icon_2_32"
+                app:startIconTint="@color/black"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/yourAddressTextInput"
+                style="@style/Custom.Outline.TextInput.Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="your address"
+                app:startIconDrawable="@drawable/home_address_icon_32"
+                app:startIconTint="@color/black"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shopAddressTextInput"
+                style="@style/Custom.Outline.TextInput.Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="shop address"
+                app:startIconDrawable="@drawable/shop_address_icon_32"
+                app:startIconTint="@color/black"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTextInput"
+                style="@style/Custom.Outline.TextInput.Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="email"
+                app:startIconDrawable="@drawable/email_icon_2_24"
+                app:startIconTint="@color/black"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTextInput"
+                style="@style/Custom.Outline.TextInput.Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="password"
+                app:startIconDrawable="@drawable/password_icon_32"
+                app:startIconTint="@color/black"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/authRoleMenu"
+                style="@style/Custom.Outline.TextInput.DropDown.Style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="roles"
+                app:startIconDrawable="@drawable/category_icon_24"
+                tools:ignore="MissingConstraints">
+
+                <AutoCompleteTextView
+                    android:id="@+id/authRoleMenuAutoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:text="user" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/signUpButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/itemDetailBuyButton"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/button_yellow_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/updateButtonTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Sign up"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/signUpFlow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:constraint_referenced_ids="textView16, signUpEditImageContainer, userNameTextInput, phoneNumberTextInput, yourAddressTextInput, shopAddressTextInput, emailTextInput, passwordTextInput, authRoleMenu, signUpButton"
+                app:flow_verticalGap="@dimen/_10sdp"
+                app:flow_verticalStyle="packed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

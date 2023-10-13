@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "171446285136",
+    "project_id": "smart-bike-fyp",
+    "storage_bucket": "smart-bike-fyp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171446285136:android:14d59f18310832b5b97255",
+        "android_client_info": {
+          "package_name": "com.example.smartbikefyp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171446285136-okhevgrvumlr9psnd3doj29c3j7ccasv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smartbikefyp",
+            "certificate_hash": "83177ef2187dfc214333964d41ccc4370aafb5f0"
+          }
+        },
+        {
+          "client_id": "171446285136-rh3bkcs1dru2d0p2sqa6lnkdrh9htb51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY9Ql31zDMPGUqdyCDzPMqhZd7UnMaL4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171446285136-rh3bkcs1dru2d0p2sqa6lnkdrh9htb51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

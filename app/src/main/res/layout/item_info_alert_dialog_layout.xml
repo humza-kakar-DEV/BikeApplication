@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_dialog_bg"
+    android:paddingBottom="@dimen/_25sdp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/alert_dialog_image_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imageFilterView"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_black_stroke_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:round="@dimen/_100sdp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phoneContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageFilterView3"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/yellow"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/phone_icon_32"
+            app:layout_constraintEnd_toStartOf="@+id/textview12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/textview12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/latobold"
+            android:text="Phone"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview16"
+            app:layout_constraintStart_toEndOf="@+id/imageFilterView3"
+            app:layout_constraintTop_toTopOf="@+id/imageFilterView3"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/latoregular"
+            android:text="03123213"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageFilterView3"
+            app:layout_constraintStart_toStartOf="@+id/textview12"
+            app:layout_constraintTop_toBottomOf="@+id/textview12"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeAddressContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageFilterView4"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/yellow"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/home_address_icon_32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/textview13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/latobold"
+            android:text="Home address"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview17"
+            app:layout_constraintStart_toEndOf="@+id/imageFilterView4"
+            app:layout_constraintTop_toTopOf="@+id/imageFilterView4"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/latoregular"
+            android:text="home address here"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageFilterView4"
+            app:layout_constraintStart_toStartOf="@+id/textview13"
+            app:layout_constraintTop_toBottomOf="@+id/textview13"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shopAddressContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageFilterView12"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/yellow"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/home_address_icon_32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/textview90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/latobold"
+            android:text="Shop address"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview88"
+            app:layout_constraintStart_toEndOf="@+id/imageFilterView12"
+            app:layout_constraintTop_toTopOf="@+id/imageFilterView12"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview88"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/latoregular"
+            android:text="shop address here"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageFilterView12"
+            app:layout_constraintStart_toStartOf="@+id/textview90"
+            app:layout_constraintTop_toBottomOf="@+id/textview90"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/idContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageFilterView6"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/yellow"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/name_icon_2_32"
+            app:layout_constraintEnd_toStartOf="@+id/textview14"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/textview14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="User id"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview18"
+            app:layout_constraintStart_toEndOf="@+id/imageFilterView6"
+            app:layout_constraintTop_toTopOf="@+id/imageFilterView6"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="place id here"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageFilterView6"
+            app:layout_constraintStart_toStartOf="@+id/textview14"
+            app:layout_constraintTop_toBottomOf="@+id/textview14"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/productIdContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageFilterView7"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/yellow"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/name_icon_32"
+            app:layout_constraintEnd_toStartOf="@+id/textview22"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/textview22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Product id"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview20"
+            app:layout_constraintStart_toEndOf="@+id/imageFilterView7"
+            app:layout_constraintTop_toTopOf="@+id/imageFilterView7"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="place id here"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageFilterView7"
+            app:layout_constraintStart_toStartOf="@+id/textview22"
+            app:layout_constraintTop_toBottomOf="@+id/textview22"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/productCategoryContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageFilterView9"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/yellow"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/category_icon_32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/textview23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Product category"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview21"
+            app:layout_constraintStart_toEndOf="@+id/imageFilterView9"
+            app:layout_constraintTop_toTopOf="@+id/imageFilterView9"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="place id here"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageFilterView9"
+            app:layout_constraintStart_toStartOf="@+id/textview23"
+            app:layout_constraintTop_toBottomOf="@+id/textview23"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="idContainer, phoneContainer, homeAddressContainer, shopAddressContainer, productIdContainer, productCategoryContainer"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalStyle="spread"
+        app:flow_verticalGap="@dimen/_12sdp"
+        app:flow_wrapMode="chain"
+        android:layout_marginLeft="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFilterView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/okButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flow2">
+
+        <ImageView
+            android:id="@+id/itemDetailBuyButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_yellow_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Great!"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

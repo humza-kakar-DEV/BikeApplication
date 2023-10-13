@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:scaleType="centerCrop"
+        android:src="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/drawerImageView2"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:background="@drawable/nav_menu_image_bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/drawerImageView"
+        app:layout_constraintEnd_toEndOf="@+id/drawerImageView"
+        app:layout_constraintStart_toStartOf="@+id/drawerImageView"
+        app:layout_constraintTop_toTopOf="@+id/drawerImageView"
+        app:layout_constraintVertical_bias="0.5"
+        app:round="@dimen/_100sdp" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/drawerImageView"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/drawerNameTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:round="@dimen/_100sdp" />
+
+    <TextView
+        android:id="@+id/drawerNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-3dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/drawerEmailTextView"
+        app:layout_constraintStart_toStartOf="@+id/drawerImageView" />
+
+    <TextView
+        android:id="@+id/drawerEmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/drawerImageView" />
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

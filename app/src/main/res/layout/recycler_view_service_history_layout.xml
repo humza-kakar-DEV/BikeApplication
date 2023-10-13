@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_25sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/serviceTimeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/order_history_service_bg"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <ImageView
+            android:id="@+id/dateImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/date_icon_32"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/dateTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:fontFamily="@font/latobold"
+            android:text="16 / 3 / 2023"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/dateImageView"
+            app:layout_constraintStart_toEndOf="@+id/dateImageView"
+            app:layout_constraintTop_toTopOf="@+id/dateImageView" />
+
+        <ImageView
+            android:id="@+id/timeImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_17sdp"
+            android:src="@drawable/clock_icon_32"
+            app:layout_constraintBottom_toBottomOf="@id/dateTextView"
+            app:layout_constraintLeft_toRightOf="@id/dateTextView"
+            app:layout_constraintRight_toLeftOf="@id/timeTextView"
+            app:layout_constraintTop_toTopOf="@id/dateTextView"
+            tools:layout_editor_absoluteY="57dp" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:fontFamily="@font/latobold"
+            android:text="4 : 25"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/timeImageView"
+            app:layout_constraintStart_toEndOf="@+id/timeImageView"
+            app:layout_constraintTop_toTopOf="@+id/timeImageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    DESIGNING CARD LAYOUT   -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/service_bought_history_bg"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceTimeContainer"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/itemHistoryCreatorImageImageView"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:scaleType="centerCrop"
+            app:round="@dimen/_100sdp"
+            android:background="@drawable/edit_image_set_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/itemHistoryCreatorNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Babar Azam"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toTopOf="@+id/itemHistoryCreatorEmailTextView"
+            app:layout_constraintLeft_toLeftOf="@id/barrier1"
+            app:layout_constraintTop_toTopOf="@+id/itemHistoryCreatorImageImageView"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/itemHistoryCreatorEmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="babarKt1122@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/itemHistoryCreatorImageImageView"
+            app:layout_constraintLeft_toRightOf="@id/barrier1"
+            app:layout_constraintTop_toBottomOf="@+id/itemHistoryCreatorNameTextView"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/itemOptionsButton"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/menu_dots_icon_48"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/itemHistoryCreatorImageImageView" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:barrierMargin="@dimen/_10sdp"
+            app:constraint_referenced_ids="itemHistoryCreatorImageImageView" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/square_yellow_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemHistoryCreatorImageImageView" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/itemHistoryCreatorItemImageImageView"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/curve_black_stroke_bg"
+            app:round="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/itemHistoryCreatorItemNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Caltic Engine Oil"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toTopOf="@+id/itemHistoryCreatorItemDescriptionTextView"
+            app:layout_constraintLeft_toLeftOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/itemHistoryCreatorItemImageImageView"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/itemHistoryCreatorItemDescriptionTextView"
+            android:layout_width="@dimen/_145sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Engine oil, also known as motor oil, is a vital lubricant used to."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toTopOf="@+id/itemHistoryCreatorItemPriceTextView"
+            app:layout_constraintLeft_toLeftOf="@+id/barrier2"
+            app:layout_constraintTop_toBottomOf="@+id/itemHistoryCreatorItemNameTextView"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/itemHistoryCreatorItemPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Rs. 1200"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/itemHistoryCreatorItemImageImageView"
+            app:layout_constraintLeft_toLeftOf="@+id/barrier2"
+            app:layout_constraintTop_toBottomOf="@+id/itemHistoryCreatorItemDescriptionTextView" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:barrierMargin="@dimen/_10sdp"
+            app:constraint_referenced_ids="itemHistoryCreatorItemImageImageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

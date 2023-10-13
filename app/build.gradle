@@ -1,0 +1,133 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlinx-serialization'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.smartbikefyp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.smartbikefyp"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+//    google maps api
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+//    easy permission library
+    implementation 'com.vmadalin:easypermissions-ktx:1.0.0'
+
+//    hilt dependency injection
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+
+//    ktor http client
+    implementation 'io.ktor:ktor-client-android:1.6.4'
+    implementation 'io.ktor:ktor-client-serialization:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0'
+    implementation 'io.ktor:ktor-client-logging-jvm:1.6.4'
+    implementation "io.ktor:ktor-client-serialization:1.6.4"
+
+//    coroutine library
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
+
+//    android ktx library
+//    usage in mvvm: You can also bind to a
+//    ViewModel in one line by using the
+//    viewModels and activityViewModels
+//    property delegates like by
+    implementation "androidx.fragment:fragment-ktx:1.5.7"
+
+    //    sdp library
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+//    view model lifecycle
+    def lifecycle_version = "2.5.0-beta01"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
+
+//    def nav_version = "2.4.1"
+    def navigation_version = "2.4.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+//    image slider 1
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.2'
+
+//    splash screen api library
+    implementation "androidx.core:core-splashscreen:1.0.1"
+
+//    recycleview scroll animation
+    implementation 'jp.wasabeef:recyclerview-animators:4.0.2'
+
+//    lottie animation
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+//    firebase libraries
+    implementation platform("com.google.firebase:firebase-bom:32.2.0")
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+
+//    permission x library
+    implementation 'com.guolindev.permissionx:permissionx:1.7.1'
+
+//    glide image library
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+
+//    exo player (video player)
+    implementation "androidx.media3:media3-exoplayer:1.1.1"
+    implementation "androidx.media3:media3-exoplayer-dash:1.1.1"
+    implementation "androidx.media3:media3-ui:1.1.1"
+
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes true
+}

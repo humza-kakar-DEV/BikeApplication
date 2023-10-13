@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.user.UserOrderHistory">
+
+    <ImageView
+        android:id="@+id/uohServiceImageView"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:background="@drawable/circle_black_stroke_bg"
+        android:padding="@dimen/_15sdp"
+        android:src="@drawable/bike_repair_icon"
+        app:layout_constraintEnd_toStartOf="@+id/uohProductImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Service"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/uohServiceImageView"
+        app:layout_constraintStart_toStartOf="@+id/uohServiceImageView"
+        app:layout_constraintTop_toBottomOf="@+id/uohServiceImageView" />
+
+    <ImageView
+        android:id="@+id/uohProductImageView"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@drawable/circle_black_stroke_bg"
+        android:padding="@dimen/_15sdp"
+        android:src="@drawable/piston_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/uohServiceImageView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/uohServiceImageView"
+        app:layout_constraintTop_toTopOf="@+id/uohServiceImageView" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Product"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/uohProductImageView"
+        app:layout_constraintStart_toStartOf="@+id/uohProductImageView"
+        app:layout_constraintTop_toBottomOf="@+id/uohProductImageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:src="@drawable/square_yellow_bg"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/uohItemCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bag_icon_32"
+        app:layout_constraintBottom_toBottomOf="@+id/uohItemCountTextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/uohItemCountTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/uohRecyclerViewLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/emptyDataIllustrationImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/empty_data_illustration"
+        android:visibility="invisible"
+        android:paddingBottom="@dimen/_100sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

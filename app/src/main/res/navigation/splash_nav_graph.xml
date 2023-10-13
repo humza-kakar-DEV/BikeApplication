@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.smartbikefyp.fragment.splash.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreen_to_permissionScreen"
+            app:destination="@id/permissionScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left" />
+        <action
+            android:id="@+id/action_splashScreen_to_authentication_nav_graph"
+            app:destination="@id/authentication_nav_graph"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashScreen_to_user_nav_graph"
+            app:destination="@id/user_nav_graph"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashScreen_to_mechanic_nav_graph"
+            app:destination="@id/mechanic_nav_graph"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/permissionScreen"
+        android:name="com.example.smartbikefyp.fragment.splash.PermissionScreen"
+        android:label="fragment_permission_screen"
+        tools:layout="@layout/fragment_permission_screen">
+        <action
+            android:id="@+id/action_permissionScreen_to_authentication_nav_graph"
+            app:destination="@id/authentication_nav_graph"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"
+            app:popUpTo="@id/permissionScreen"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_permissionScreen_to_user_nav_graph"
+            app:destination="@id/user_nav_graph"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"
+            app:popUpTo="@id/permissionScreen"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_permissionScreen_to_mechanic_nav_graph"
+            app:destination="@id/mechanic_nav_graph"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"
+            app:popUpTo="@id/permissionScreen"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>

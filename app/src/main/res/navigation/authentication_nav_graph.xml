@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authentication_nav_graph"
+    app:startDestination="@id/signIn">
+
+    <fragment
+        android:id="@+id/signIn"
+        android:name="com.example.smartbikefyp.fragment.authentication.SignIn"
+        android:label="Log in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signIn_to_signUp"
+            app:destination="@id/signUp"
+            app:popUpTo="@id/signUp"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"/>
+        <action
+            android:id="@+id/action_signIn_to_user_nav_graph"
+            app:destination="@id/user_nav_graph"
+            app:popUpTo="@+id/signIn"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"/>
+        <action
+            android:id="@+id/action_signIn_to_mechanic_nav_graph"
+            app:destination="@id/mechanic_nav_graph"
+            app:popUpTo="@+id/signIn"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.example.smartbikefyp.fragment.authentication.SignUp"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_signIn"
+            app:destination="@id/signIn"
+            app:popUpTo="@id/signIn"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/custom_slide_in_left"
+            app:exitAnim="@anim/custom_slide_out_right"/>
+        <action
+            android:id="@+id/action_signUp_to_user_nav_graph"
+            app:destination="@id/user_nav_graph"
+            app:popUpTo="@+id/signUp"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"/>
+        <action
+            android:id="@+id/action_signUp_to_mechanic_nav_graph"
+            app:destination="@id/mechanic_nav_graph"
+            app:popUpTo="@+id/signUp"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/custom_slide_in_right"
+            app:exitAnim="@anim/custom_slide_out_left"/>
+    </fragment>
+
+</navigation>

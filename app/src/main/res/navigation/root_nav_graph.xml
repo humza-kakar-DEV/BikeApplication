@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash_nav_graph">
+
+    <include app:graph="@navigation/splash_nav_graph" />
+    <include app:graph="@navigation/authentication_nav_graph" />
+    <include app:graph="@navigation/user_nav_graph" />
+    <include app:graph="@navigation/mechanic_nav_graph" />
+
+    <fragment
+        android:id="@+id/bikeDiagnoseFragment"
+        android:name="com.example.smartbikefyp.fragment.global.BikeDiagnoseFragment"
+        android:label="Bike diagnose"
+        tools:layout="@layout/fragment_bike_diagnose" />
+    <action
+        android:id="@+id/action_global_bikeDiagnoseFragment"
+        app:destination="@id/bikeDiagnoseFragment"
+        app:enterAnim="@anim/custom_slide_in_right"
+        app:exitAnim="@anim/custom_slide_out_left"
+        app:popEnterAnim="@anim/custom_slide_in_left"
+        app:popExitAnim="@anim/custom_slide_out_right" />
+
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.example.smartbikefyp.fragment.global.VideoPlayerFragment"
+        android:label="Bike diagnose"
+        tools:layout="@layout/fragment_video_player" />
+    <action
+        android:id="@+id/action_global_videoPlayerFragment"
+        app:destination="@id/videoPlayerFragment"
+        app:enterAnim="@anim/custom_slide_in_right"
+        app:exitAnim="@anim/custom_slide_out_left"
+        app:popEnterAnim="@anim/custom_slide_in_left"
+        app:popExitAnim="@anim/custom_slide_out_right" />
+
+</navigation>

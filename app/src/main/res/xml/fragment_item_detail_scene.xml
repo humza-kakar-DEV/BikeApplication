@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        motion:motionInterpolator="easeInOut">
+        <KeyFrameSet></KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/itemDetailProductImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:alpha="0"
+            android:translationY="@dimen/_100sdp" />
+        <Constraint
+            android:id="@+id/parentNameAndPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:translationY="@dimen/_100sdp"
+            motion:layout_editor_absoluteY="260dp" />
+        <Constraint
+            android:id="@+id/itemDetailInfoDivider1"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:alpha="0"
+            android:translationY="@dimen/_100sdp" />
+        <Constraint
+            android:id="@+id/itemDetailDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:translationY="@dimen/_100sdp" />
+        <Constraint
+            android:id="@+id/itemDetailInfoDivider2"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:alpha="0"
+            android:translationY="@dimen/_100sdp" />
+        <Constraint
+            android:id="@+id/itemCategoryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:alpha="0"
+            android:translationY="@dimen/_100sdp" />
+        <Constraint
+            android:id="@+id/itemDetailInfoDivider3"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:alpha="0"
+            android:translationY="@dimen/_100sdp" />
+        <Constraint
+            android:id="@+id/retailerProfileInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:translationY="@dimen/_100sdp" />
+        <Constraint
+            android:id="@+id/userDetailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:translationY="@dimen/_100sdp" />
+        <Constraint
+            android:id="@+id/flow3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/itemDetailProductImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp" />
+        <Constraint
+            android:id="@+id/parentNameAndPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_editor_absoluteY="260dp" />
+        <Constraint
+            android:id="@+id/itemDetailInfoDivider1"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_4sdp" />
+        <Constraint
+            android:id="@+id/itemDetailDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Constraint
+            android:id="@+id/itemDetailInfoDivider2"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_4sdp" />
+        <Constraint
+            android:id="@+id/itemCategoryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp" />
+        <Constraint
+            android:id="@+id/itemDetailInfoDivider3"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_4sdp" />
+        <Constraint
+            android:id="@+id/retailerProfileInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Constraint
+            android:id="@+id/userDetailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Constraint
+            android:id="@+id/flow3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ConstraintSet>
+</MotionScene>
